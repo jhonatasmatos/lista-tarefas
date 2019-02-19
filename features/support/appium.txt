@@ -1,0 +1,7 @@
+[caps]
+platformName = "Android"
+deviceName = "Pixel 3"
+app = 'C:\ruby\appium\lista-tarefas\features\support\lista-tarefas.apk'
+appPackage = "com.tasks.android"
+
+
