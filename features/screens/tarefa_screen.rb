@@ -8,7 +8,7 @@ class TarefaScreen
         find_element(:xpath, "//*[@text='#{nome_lista}']")
 
         wait_true(5) do 
-            exists { nome_lista }
+            exists {nome_lista}
         end
     end
 
