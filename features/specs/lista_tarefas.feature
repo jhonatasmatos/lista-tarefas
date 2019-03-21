@@ -10,9 +10,9 @@ Funcionalidade: Lista de Tarefas
         Dado que estou na tela inicial do app
         E visualizo o menu list
         E toco na opção para inserir uma nova lista
-        E preencho o nome "lista-testes"
+        E preencho o nome da tarefa
         Quando tocar em salvar
-        Então devo ver a lista de tarefas com o nome "lista-testes"
+        Então devo ver a lista de tarefas com o nome preenchido
 
  
  

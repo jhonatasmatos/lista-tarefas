@@ -1,24 +1,26 @@
-Dado("que estou na tela inicial do app") do
-  @home = HomeScreen.new
+Dado("que estou na tela inicial do app") do 
+  @home.validar_home
 end
   
 Dado("visualizo o menu list") do
-  @home.clicar_menu
-  @home.validar_menu
+  @home.clicar_menu 
+  @menu.validar_menu
 end
   
 Dado("toco na opção para inserir uma nova lista") do
-    @home.tocar_new_list
+    @menu.tocar_new_list
 end
   
-Dado("preencho o nome {string}") do |nome|
-    @home.preencher_nome_lista(nome)
+Dado("preencho o nome da tarefa") do
+  @nome_tarefa = Faker::Lorem.word
+  @add_list.preencher_nome_lista(@nome_tarefa)
 end
   
 Quando("tocar em salvar") do
-    @home.tocar_salvar
+    @add_list.tocar_salvar
 end
-  
-Então("devo ver a lista de tarefas com o nome {string}") do |nome|
-  TarefaScreen.new(nome)
+
+Então("devo ver a lista de tarefas com o nome preenchido") do
+  @tarefas.valida_lista_tarefas(@nome_tarefa)
 end
+

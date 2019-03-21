@@ -1,5 +1,6 @@
 require 'appium_lib'
 require 'pry'
+require 'faker'
 
 # Saber quais caps queremos na nossa sessão(appium.txt)
 caps_path = File.join(File.dirname(__FILE__), 'appium.txt')
@@ -12,8 +13,7 @@ Appium.promote_appium_methods Object
 
 # Iniciar sessão
 Before do |cenario|
-    $driver.start_driver
-    
+    $driver.start_driver   
 end
 
 # Finalizar sessão
