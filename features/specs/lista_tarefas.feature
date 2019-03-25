@@ -3,7 +3,7 @@
 Funcionalidade: Lista de Tarefas
     Para que eu possa registrar e gerenciar minhas tarefas
     Sendo um usuário utilizando o app
-    Posso adicionar uma lista de tarefas
+    Posso adicionar e remover uma lista de tarefas
 
     @inserir
     Cenário: Inserir nova lista
@@ -14,5 +14,10 @@ Funcionalidade: Lista de Tarefas
         Quando tocar em salvar
         Então devo ver a lista de tarefas com o nome preenchido
 
+    @deletar
+    Cenário: Excluir lista
+        Dado que tenho uma lista de tarefas adicionada
+        Quando deleto essa lista de tarefas
+        Então devo ver a seguinte mensagem "Task list deleted"
  
  

@@ -16,3 +16,6 @@ gem 'pry'
 # is used to easily generate fake data: names, addresses, phone numbers, etc.
 gem 'faker'
 
+# BDD for Ruby
+gem 'rspec'
+
